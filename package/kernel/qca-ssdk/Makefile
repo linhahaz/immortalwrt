@@ -15,8 +15,6 @@ PKG_BUILD_FLAGS:=no-lto
 PKG_EXTMOD_SUBDIRS:=mk
 
 PKG_CONFIG_DEPENDS:= \
-	CONFIG_TARGET_qualcommax_ipq807x \
-	CONFIG_TARGET_qualcommax_ipq60xx \
 	CONFIG_TARGET_qualcommax_ipq50xx
 
 include $(INCLUDE_DIR)/kernel.mk
