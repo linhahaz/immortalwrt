@@ -87,6 +87,10 @@
 	status = "okay";
 };
 
+&uniphy0 {
+	status = "okay";
+};
+
 &usb3 {
 	status = "okay";
 };
