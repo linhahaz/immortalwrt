@@ -1,0 +1,18 @@
+--- a/qca_uniphy.c
++++ b/qca_uniphy.c
+@@ -213,6 +213,7 @@ static void qca_uniphy_pcs_get_state_10b
+ }
+ 
+ static void qca_uniphy_pcs_get_state(struct phylink_pcs *pcs,
++				     unsigned int neg_mode,
+ 				     struct phylink_link_state *state)
+ {
+ 	struct qca_uniphy_pcs *upcs = pcs_to_uniphy_pcs(pcs);
+@@ -735,7 +736,6 @@ static int qca_uniphy_probe(struct platf
+ 
+ 	for (i = 0; i < QCA_UNIPHY_CHANNELS; i++) {
+ 		uniphy->port_pcs[i].pcs.ops = &qca_uniphy_pcs_ops;
+-		uniphy->port_pcs[i].pcs.neg_mode = true;
+ 		uniphy->port_pcs[i].pcs.poll = true;
+ 		uniphy->port_pcs[i].uniphy = uniphy;
+ 		uniphy->port_pcs[i].channel = i;
